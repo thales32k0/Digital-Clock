@@ -12,7 +12,7 @@
 ### About:
 
 
-Application created with Java, it is a digital clock. // Aplicação criada com Java, é um relógio digital.
+This is an application that I created with the help of some tutorials and ChatGPT, so far it has been the most complex and I have used several imports. // Essa é uma aplicação que eu criei com a ajuda de alguns tutoriais e o ChatGPT, até o momento foi a mais complexa e utilizei vários imports.
 
 ---
 
