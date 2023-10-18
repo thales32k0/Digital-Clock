@@ -23,36 +23,36 @@ class Digital_clock extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
 
-        // Criando o painel e as datss
+        // Create panel and dates
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.setLayout(new BorderLayout());
 
-        // Criando o display de tempo
+        // Create time display
         timeLabel = new JLabel();
         timeLabel.setFont(new Font("Arial", Font.PLAIN, 60));
         timeLabel.setHorizontalAlignment(SwingConstants.CENTER);
         timeLabel.setVerticalAlignment(SwingConstants.CENTER);
         timeLabel.setForeground(Color.RED);
 
-        // Display da data
+        // Date display
         dateLabel = new JLabel();
         dateLabel.setFont(new Font("Arial", Font.PLAIN, 20));
         dateLabel.setHorizontalAlignment(SwingConstants.CENTER);
         dateLabel.setVerticalAlignment(SwingConstants.CENTER);
         dateLabel.setForeground(Color.WHITE);
 
-        // Adicionando tempo e data
+        // Adding time and date
         panel.add(timeLabel, BorderLayout.CENTER);
         panel.add(dateLabel, BorderLayout.SOUTH);
 
-        // Cor do painel
+        // Panel color
         panel.setBackground(Color.BLACK);
 
-        // Adicionando o painel na moldura
+        // Adding the panel to the frame
         add(panel);
 
-        // Cronometo para atualizar data e hora
+        // Stopwatch to update date and time
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -63,16 +63,16 @@ class Digital_clock extends JFrame {
     }
 
     private void updateTimeAndDate() {
-        // Obtendo a hora formatada
+        // Getting the formatted time
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat timeFormatter = new SimpleDateFormat("HH:mm:ss");
         String time = timeFormatter.format(calendar.getTime());
 
-        // Obtendo data formatada
+        // Getting the formatted date
         SimpleDateFormat dateFormatter = new SimpleDateFormat("EEE, MMM dd, yyyy");
         String date = dateFormatter.format(calendar.getTime());
 
-        // Atualizar data e hora
+        // Update date and time
         timeLabel.setText(time);
         dateLabel.setText(date);
     }
